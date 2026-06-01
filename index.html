@@ -6,81 +6,93 @@
     <title>Vibe Stitch | Bespoke Tailoring & Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-stone-50 text-stone-900">
+<body class="bg-stone-50 text-stone-900 font-sans leading-relaxed">
 
-    <nav class="flex justify-between items-center p-6 bg-white">
+    <--- nodejs.org ping statistics Navigation -->
+    <nav class="flex justify-between items-center p-6 bg-white shadow-sm">
         <img src="vibe-logo.png" alt="Vibe Stitch" class="h-12 w-auto">
-        <a href="https://wa.me/234XXXXXXXXXX" class="text-xs font-bold uppercase tracking-widest border-b border-black">Book Consultation</a>
+        <a href="https://wa.me/234XXXXXXXXXX" class="text-xs font-bold uppercase tracking-widest border-b-2 border-stone-900 hover:text-stone-500 transition-colors">Begin Your Journey</a>
     </nav>
 
-    <section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <img src="fashion_studio.jpg" alt="Atelier" class="absolute inset-0 w-full h-full object-cover brightness-50">
-        <div class="relative text-center text-white p-6">
-            <h1 class="text-5xl font-serif italic mb-4">Precision in Every Stitch</h1>
-            <p class="uppercase tracking-widest text-sm">Bespoke Apparel for the Modern Nigerian Aesthetic</p>
+    <--- nodejs.org ping statistics Emotional Hero -->
+    <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        <img src="fashion_studio.jpg" alt="Atelier" class="absolute inset-0 w-full h-full object-cover brightness-40">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative text-center text-white p-6 max-w-3xl">
+            <h1 class="text-5xl md:text-6xl font-serif italic mb-6 drop-shadow-lg">Wear Your Story.</h1>
+            <p class="text-lg md:text-xl font-light tracking-wide mb-8">More than fabric and thread. We craft confidence, elegance, and unforgettable moments.</p>
+            <a href="https://wa.me/234XXXXXXXXXX" class="inline-block bg-white text-stone-900 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-stone-200 transition">Book Your Consultation</a>
         </div>
     </section>
 
-    <--- nodejs.org ping statistics Global Services -->
-    <section class="max-w-4xl mx-auto py-16 px-4 border-t border-stone-200">
-        <h2 class="text-center text-xl font-serif mb-8 uppercase tracking-widest">Global Atelier Services</h2>
-        <div class="grid md:grid-cols-3 gap-8 text-center text-sm">
-            <div>
-                <h3 class="font-bold mb-2">Worldwide Shipping</h3>
-                <p class="text-stone-600">Secure, tracked, and insured delivery to the USA, Germany, China, and beyond.</p>
-            </div>
-            <div>
-                <h3 class="font-bold mb-2">Virtual Consultations</h3>
-                <p class="text-stone-600">Expert fitting guidance via video call, tailored to your time zone.</p>
-            </div>
-            <div>
-                <h3 class="font-bold mb-2">Quality Guarantee</h3>
-                <p class="text-stone-600">Premium craftsmanship from our Lagos atelier, standardized for global wear.</p>
-            </div>
-        </div>
+    <--- nodejs.org ping statistics The Philosophy (Psychological Connection) -->
+    <section class="max-w-4xl mx-auto py-20 px-6 text-center">
+        <h2 class="text-3xl font-serif italic mb-6">Every Garment is a Promise</h2>
+        <p class="text-stone-600 text-lg leading-relaxed">
+            Whether it is the gown you walk down the aisle in, the suit that commands the boardroom, or the native wear that honors your heritage, your clothing should be a flawless reflection of your unique essence. We pour our passion into every stitch so you can step into the world feeling absolutely unstoppable.
+        </p>
     </section>
 
-    <section class="max-w-6xl mx-auto py-16 px-4">
-        <h2 class="text-center text-2xl font-serif mb-12 uppercase tracking-widest underline decoration-stone-300 underline-offset-8">The Collection</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <--- nodejs.org ping statistics Gallery Grid (The Dream) -->
+    <section class="max-w-7xl mx-auto pb-20 px-4">
+        <div class="flex items-center justify-center mb-12">
+            <div class="h-px bg-stone-300 w-16"></div>
+            <h2 class="mx-6 text-xl font-serif uppercase tracking-widest text-stone-800">The Collection</h2>
+            <div class="h-px bg-stone-300 w-16"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="group cursor-pointer">
-                <img src="bridal_gown.jpg" alt="Bridal" class="w-full h-96 object-cover hover:opacity-90 transition">
-                <p class="mt-4 font-bold text-sm uppercase">Bridal Couture</p>
-            </div>
-            <div class="group cursor-pointer">
-                <img src="native_wear.jpg" alt="Native" class="w-full h-96 object-cover hover:opacity-90 transition">
-                <p class="mt-4 font-bold text-sm uppercase">Contemporary Native</p>
+                <div class="overflow-hidden mb-4 shadow-lg">
+                    <img src="bridal_gown.jpg" alt="Bridal" class="w-full h-[30rem] object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="font-bold text-sm uppercase tracking-wide text-center">Bridal Couture</h3>
+                <p class="text-xs text-stone-500 text-center mt-2 italic">For the day you will never forget.</p>
             </div>
             <div class="group cursor-pointer">
-                <img src="mens_suit.jpg" alt="Suits" class="w-full h-96 object-cover hover:opacity-90 transition">
-                <p class="mt-4 font-bold text-sm uppercase">Tailored Suiting</p>
+                <div class="overflow-hidden mb-4 shadow-lg">
+                    <img src="native_wear.jpg" alt="Native" class="w-full h-[30rem] object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="font-bold text-sm uppercase tracking-wide text-center">Contemporary Native</h3>
+                <p class="text-xs text-stone-500 text-center mt-2 italic">Honoring heritage with modern elegance.</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 shadow-lg">
+                    <img src="mens_suit.jpg" alt="Suits" class="w-full h-[30rem] object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="font-bold text-sm uppercase tracking-wide text-center">Tailored Suiting</h3>
+                <p class="text-xs text-stone-500 text-center mt-2 italic">Command the room with precision fit.</p>
             </div>
         </div>
     </section>
 
-    <--- nodejs.org ping statistics Global Services -->
-    <section class="max-w-4xl mx-auto py-16 px-4 border-t border-stone-200">
-        <h2 class="text-center text-xl font-serif mb-8 uppercase tracking-widest">Global Atelier Services</h2>
-        <div class="grid md:grid-cols-3 gap-8 text-center text-sm">
-            <div>
-                <h3 class="font-bold mb-2">Worldwide Shipping</h3>
-                <p class="text-stone-600">Secure, tracked, and insured delivery to the USA, Germany, China, and beyond.</p>
-            </div>
-            <div>
-                <h3 class="font-bold mb-2">Virtual Consultations</h3>
-                <p class="text-stone-600">Expert fitting guidance via video call, tailored to your time zone.</p>
-            </div>
-            <div>
-                <h3 class="font-bold mb-2">Quality Guarantee</h3>
-                <p class="text-stone-600">Premium craftsmanship from our Lagos atelier, standardized for global wear.</p>
+    <--- nodejs.org ping statistics Global Concierge (Trust & Logistics) -->
+    <section class="bg-stone-100 py-16 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-2xl font-serif mb-12">A Seamless Global Experience</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-6 bg-white shadow-sm">
+                    <h3 class="font-bold mb-3 uppercase tracking-wide text-sm">Worldwide Delivery</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">From our Lagos atelier directly to your hands in the US, Europe, or Asia. Secure, tracked, and insured.</p>
+                </div>
+                <div class="p-6 bg-white shadow-sm">
+                    <h3 class="font-bold mb-3 uppercase tracking-wide text-sm">Virtual Atelier</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Distance is no barrier to perfection. We guide you through precision measurements via personal video consultations.</p>
+                </div>
+                <div class="p-6 bg-white shadow-sm">
+                    <h3 class="font-bold mb-3 uppercase tracking-wide text-sm">Uncompromising Quality</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Every piece is subjected to rigorous quality control, ensuring it meets international luxury standards before shipping.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-stone-900 text-stone-300 py-16 text-center">
-        <h3 class="text-white text-xl mb-6">Ready to create your look?</h3>
-        <a href="https://wa.me/234XXXXXXXXXX" class="bg-white text-black px-8 py-4 font-bold uppercase text-sm hover:bg-stone-200 transition">Contact via WhatsApp</a>
-        <p class="mt-12 text-xs uppercase tracking-widest">&copy; 2026 Vibe Stitch Apparel</p>
+    <--- nodejs.org ping statistics Footer / CTA -->
+    <footer class="bg-stone-900 text-stone-300 py-20 text-center px-6">
+        <h3 class="text-white text-3xl font-serif italic mb-4">Let's Bring Your Vision to Life</h3>
+        <p class="mb-10 text-stone-400 font-light">Our lead designer is ready to discuss your custom piece.</p>
+        <a href="https://wa.me/234XXXXXXXXXX" class="inline-block bg-white text-black px-10 py-4 font-bold uppercase text-sm tracking-widest hover:bg-stone-200 transition shadow-lg">Start Your Consultation</a>
+        <p class="mt-16 text-xs uppercase tracking-widest text-stone-600">&copy; 2026 Vibe Stitch Apparel | Lagos • Global</p>
     </footer>
 
 </body>
