@@ -1,436 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vibe Stitch Apparel Ltd | Luxury Bespoke Fashion & Tailoring</title>
-<meta name="description" content="Vibe Stitch Apparel Ltd – Fashion that speaks volumes, crafted to fit your life. Luxury bespoke tailoring, bridal, ready-to-wear, and corporate uniforms. CAC Registered RC 875527. Ogun State, Nigeria.">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --blush: #C9A1A1;
-    --burgundy: #722F37;
-    --gold: #D4AF37;
-    --charcoal: #2D2D2D;
-    --off-white: #FAF8F5;
-    --text-dark: #1a1a1a;
-    --text-muted: #6c757d;
-    --border-light: #e9ecef;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Lato', sans-serif;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: var(--font-body);
-    background: var(--off-white);
-    color: var(--text-dark);
-    line-height: 1.65;
-    overflow-x: hidden;
-  }
-  h1, h2, h3, h4, .nav-logo, .section-title {
-    font-family: var(--font-heading);
-    font-weight: 700;
-  }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-
-  /* NAV */
-  .navbar {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0.7rem 1.5rem; position: fixed; top: 0; width: 100%; z-index: 999;
-    background: rgba(250,248,245,0.92); backdrop-filter: blur(14px);
-    border-bottom: 1px solid transparent; transition: all 0.3s;
-  }
-  .navbar.scrolled { border-bottom: 1px solid var(--border-light); box-shadow: 0 2px 15px rgba(0,0,0,0.04); }
-  .nav-logo {
-    font-size: 1.8rem; font-weight: 900; color: var(--burgundy);
-    text-decoration: none; letter-spacing: -0.5px;
-  }
-  .nav-logo span { color: var(--blush); }
-  .nav-links {
-    display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;
-  }
-  .nav-links a {
-    color: var(--charcoal); text-decoration: none; font-weight: 700;
-    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px;
-    transition: color 0.3s; position: relative;
-  }
-  .nav-links a::after {
-    content: ''; display: block; width: 0; height: 2px; background: var(--gold);
-    transition: width 0.3s; position: absolute; bottom: -4px; left: 0;
-  }
-  .nav-links a:hover { color: var(--burgundy); }
-  .nav-links a:hover::after { width: 100%; }
-  .nav-cta {
-    background: var(--burgundy); color: #fff; padding: 0.7rem 1.8rem;
-    border-radius: 0; font-weight: 700; font-size: 0.85rem; text-decoration: none;
-    text-transform: uppercase; letter-spacing: 1.2px; transition: background 0.3s;
-  }
-  .nav-cta:hover { background: var(--gold); color: var(--charcoal); }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh; display: flex; align-items: center; position: relative;
-    background: url('fashion_studio.jpg') center/cover no-repeat;
-    background-attachment: fixed;
-  }
-  .hero::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, rgba(44,44,44,0.75) 0%, rgba(114,47,55,0.35) 100%);
-  }
-  .hero-content { max-width: 700px; position: relative; z-index: 2; color: #fff; }
-  .hero-badge {
-    display: inline-block; background: rgba(212,175,55,0.25); color: var(--gold);
-    padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 1.8px; margin-bottom: 1.5rem;
-    border: 1px solid var(--gold);
-  }
-  .hero h1 {
-    font-size: 4.2rem; font-weight: 900; line-height: 1.12; margin-bottom: 1.2rem;
-    letter-spacing: -1px; color: #fff;
-  }
-  .hero h1 .accent { color: var(--gold); display: block; font-size: 3.2rem; font-style: italic; }
-  .hero .lead {
-    font-size: 1.2rem; color: rgba(255,255,255,0.85); margin-bottom: 2.5rem;
-    max-width: 550px;
-  }
-  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-gold {
-    background: var(--gold); color: var(--charcoal); padding: 0.95rem 2.2rem;
-    border-radius: 0; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 1.2px; text-decoration: none; transition: all 0.3s;
-    font-size: 0.9rem; border: 2px solid var(--gold);
-  }
-  .btn-gold:hover { background: transparent; color: var(--gold); }
-  .btn-outline-white {
-    border: 2px solid rgba(255,255,255,0.8); color: #fff;
-    padding: 0.95rem 2.2rem; border-radius: 0; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 1.2px; text-decoration: none;
-    font-size: 0.9rem; transition: all 0.3s;
-  }
-  .btn-outline-white:hover { background: #fff; color: var(--charcoal); }
-  .hero-contact {
-    margin-top: 2.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.8);
-  }
-  .hero-contact a { color: var(--gold); text-decoration: none; font-weight: 700; }
-
-  /* STATS */
-  .stats-bar {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem;
-    padding: 3rem 1.5rem; background: var(--burgundy); color: #fff;
-    border-bottom: 5px solid var(--gold);
-  }
-  .stat-item { text-align: center; }
-  .stat-number { font-family: var(--font-heading); font-size: 2.6rem; font-weight: 900; color: var(--gold); }
-  .stat-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.9; margin-top: 0.3rem; }
-
-  /* SECTIONS */
-  .section { padding: 6rem 0; }
-  .section-light { background: #fff; }
-  .section-title {
-    font-size: 2.6rem; font-weight: 900; color: var(--burgundy);
-    margin-bottom: 0.8rem; position: relative; display: inline-block;
-  }
-  .section-title::after {
-    content: ''; display: block; width: 70px; height: 3px;
-    background: var(--gold); margin-top: 0.5rem;
-  }
-  .section-subtitle {
-    color: var(--text-muted); max-width: 650px; margin-bottom: 3rem;
-    font-size: 1.1rem; font-style: italic;
-  }
-
-  /* SERVICES */
-  .services-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  .svc-card {
-    text-align: center; padding: 2.8rem 2rem;
-    border: 1px solid var(--border-light); background: #fff;
-    transition: all 0.4s; border-radius: 2px; position: relative; overflow: hidden;
-  }
-  .svc-card::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-    background: var(--gold); transform: scaleX(0); transition: transform 0.4s;
-    transform-origin: left;
-  }
-  .svc-card:hover::before { transform: scaleX(1); }
-  .svc-card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px rgba(0,0,0,0.05); border-color: transparent; }
-  .svc-icon { font-size: 3rem; color: var(--burgundy); margin-bottom: 1.2rem; transition: color 0.3s; }
-  .svc-card:hover .svc-icon { color: var(--gold); }
-  .svc-card h3 { font-size: 1.2rem; font-weight: 900; margin-bottom: 0.5rem; color: var(--charcoal); }
-  .svc-card p { color: var(--text-muted); font-size: 0.92rem; }
-
-  /* PORTFOLIO */
-  .portfolio-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  .portfolio-card {
-    background: #fff; border: 1px solid var(--border-light);
-    overflow: hidden; transition: all 0.4s; border-radius: 2px;
-  }
-  .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 18px 30px rgba(0,0,0,0.06); }
-  .portfolio-img {
-    height: 380px; background-size: cover; background-position: center;
-    position: relative; transition: transform 0.4s;
-  }
-  .portfolio-card:hover .portfolio-img { transform: scale(1.03); }
-
-  /* TESTIMONIAL CAROUSEL */
-  .testimonial-carousel .carousel-item { padding: 2rem 1rem; }
-  .testimonial-card {
-    background: #fff; border-left: 5px solid var(--gold);
-    padding: 3rem 2.5rem; border-radius: 2px; box-shadow: 0 8px 25px rgba(0,0,0,0.03);
-    text-align: center; max-width: 800px; margin: 0 auto;
-  }
-  .testimonial-text {
-    font-style: italic; color: var(--text-muted); font-size: 1.2rem;
-    margin-bottom: 1.5rem; line-height: 1.7;
-  }
-  .testimonial-author { font-weight: 900; color: var(--charcoal); font-size: 1.1rem; }
-  .testimonial-role { color: var(--burgundy); font-size: 0.85rem; font-weight: 600; }
-
-  /* CONTACT */
-  .contact-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem; align-items: start;
-  }
-  .contact-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.8rem; }
-  .contact-item i { font-size: 1.5rem; color: var(--burgundy); margin-top: 3px; }
-  .badge-cert {
-    display: inline-block; background: rgba(114,47,55,0.06); color: var(--burgundy);
-    padding: 0.5rem 1.2rem; border-radius: 2px; font-weight: 700;
-    margin: 0.3rem 0.5rem 0.3rem 0; font-size: 0.85rem; letter-spacing: 0.5px;
-    border: 1px solid rgba(114,47,55,0.15);
-  }
-
-  /* FOOTER */
-  .footer {
-    background: var(--charcoal); color: rgba(255,255,255,0.7);
-    text-align: center; padding: 3rem 0; font-size: 0.9rem;
-  }
-  .footer a { color: var(--gold); text-decoration: none; font-weight: 600; }
-
-  /* BACK TO TOP */
-  .back-to-top {
-    position: fixed; bottom: 30px; right: 30px; background: var(--burgundy);
-    color: #fff; width: 45px; height: 45px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem; text-decoration: none; opacity: 0; visibility: hidden;
-    transition: all 0.3s; z-index: 998; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  }
-  .back-to-top.show { opacity: 1; visibility: visible; }
-  .back-to-top:hover { background: var(--gold); color: var(--charcoal); }
-
-  @media (max-width: 768px) {
-    .hero h1 { font-size: 2.8rem; }
-    .hero h1 .accent { font-size: 2.2rem; }
-    .nav-links { display: none; }
-    .section-title { font-size: 2rem; }
-    .stats-bar { gap: 1.5rem; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Stitch | Bespoke Tailoring & Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-stone-50 text-stone-900">
 
-<nav class="navbar" id="navbar">
-  <a href="#" class="nav-logo"><img src="vibe-logo.png" alt="Vibe Stitch Logo" style="height:72px;width:auto;"></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="https://wa.me/2348123491673" class="nav-cta">Book Consultation</a>
-</nav>
+    <nav class="flex justify-between items-center p-6 bg-white">
+        <img src="vibe-logo.png" alt="Vibe Stitch" class="h-12 w-auto">
+        <a href="https://wa.me/234XXXXXXXXXX" class="text-xs font-bold uppercase tracking-widest border-b border-black">Book Consultation</a>
+    </nav>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-badge">✦ CAC Registered RC 875527</span>
-      <h1>Fashion that<br><span class="accent">speaks volumes</span></h1>
-      <p class="lead">Luxury bespoke tailoring, haute couture bridal, and refined ready-to-wear — meticulously crafted to fit your life. Based in Ogun State, serving Nigeria.</p>
-      <div class="hero-btns">
-        <a href="https://wa.me/2348123491673" class="btn-gold" target="_blank">Chat on WhatsApp</a>
-        <a href="#portfolio" class="btn-outline-white">View Our Work</a>
-      </div>
-      <div class="hero-contact">
-        📞 <a href="tel:+2348123491673">+234 812 349 1673</a> &nbsp;|&nbsp; ✉️ <a href="mailto:info.vibestitcheapparel@gmail.com">info.vibestitcheapparel@gmail.com</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-number counter" data-target="300">0</div><div class="stat-label">Custom Pieces</div></div>
-  <div class="stat-item"><div class="stat-number counter" data-target="150">0</div><div class="stat-label">Happy Clients</div></div>
-  <div class="stat-item"><div class="stat-number counter" data-target="10">0</div><div class="stat-label">States Served</div></div>
-  <div class="stat-item"><div class="stat-number">Est. 2025</div><div class="stat-label">Design Excellence</div></div>
-</div>
-
-<section id="about" class="section section-light">
-  <div class="container">
-    <h2 class="section-title">The Atelier</h2>
-    <p class="section-subtitle">A distinguished Nigerian fashion house blending international couture standards with the richness of local craftsmanship.</p>
-    <p style="color: var(--text-muted); max-width: 800px;">Founded in 2025 and duly incorporated under the Companies and Allied Matters Act (RC 875527), Vibe Stitch Apparel Ltd has rapidly become a trusted name for bespoke tailoring, bridal couture, and corporate identity wear. From our studio in Sango Ota, we create garments that transcend trends — each piece is a collaboration between our designers and your unique story, executed with impeccable pattern work, luxurious fabrics, and an unwavering commitment to perfection.</p>
-  </div>
-</section>
-
-<section id="services" class="section">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-subtitle">A complete suite of fashion solutions, from concept to final stitch.</p>
-    <div class="services-grid">
-      <div class="svc-card"><div class="svc-icon"><i class="bi bi-scissors"></i></div><h3>Bespoke Tailoring</h3><p>Custom clothing design for men & women – suits, dresses, native and corporate wear, fitted to perfection.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="bi bi-bag-heart"></i></div><h3>Ready-to-Wear</h3><p>Seasonal collections crafted with premium fabrics, available off‑the‑rack or in limited drops.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="bi bi-gem"></i></div><h3>Bridal & Evening</h3><p>Wedding gowns, bridal party outfits, and evening dresses designed to make your moment unforgettable.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="bi bi-buildings"></i></div><h3>Corporate Uniforms</h3><p>Branded workwear and uniforms for businesses, schools, and institutions — consistent quality at scale.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="bi bi-palette"></i></div><h3>Fashion Consulting</h3><p>Personal styling, wardrobe audits, trend research, and fashion illustration for individuals and brands.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="bi bi-rulers"></i></div><h3>Pattern & Production</h3><p>Pattern drafting, grading, technical design packs, and sample production for emerging labels.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="bi bi-brush"></i></div><h3>Alterations & Repairs</h3><p>Expert alterations, restyling, and garment repair to extend the life of your favourite pieces.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="bi bi-box-seam"></i></div><h3>Fabric Sourcing</h3><p>Sourcing of quality textiles and support with textile development for designers and production houses.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="portfolio" class="section section-light">
-  <div class="container">
-    <h2 class="section-title">Recent Commissions</h2>
-    <p class="section-subtitle">A curated selection of our latest creations.</p>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <div class="portfolio-img" style="background-image: url('bridal_gown.jpg'); background-size: cover; background-position: center;"></div>
-        <div class="portfolio-body"><h4>Bridal Gown & Veil</h4><p>Custom ivory lace gown with hand‑beaded bodice, created for a Lagos society wedding.</p></div>
-      </div>
-      <div class="portfolio-card">
-        <div class="portfolio-img" style="background-image: url('mens_suit.jpg'); background-size: cover; background-position: center;"></div>
-        <div class="portfolio-body"><h4>Men's Three‑Piece Suit</h4><p>Italian wool suit with peak lapels, bespoke‑fitted for a corporate executive.</p></div>
-      </div>
-      <div class="portfolio-card">
-        <div class="portfolio-img" style="background-image: url('native_wear.jpg'); background-size: cover; background-position: center;"></div>
-        <div class="portfolio-body"><h4>Ready‑to‑Wear Capsule</h4><p>A limited 12‑piece collection of contemporary native wear in hand‑dyed cotton.</p></div>
-      </div>
-      <div class="portfolio-card">
-        <div class="portfolio-img" style="background-image: url('tailor_fitting.jpg'); background-size: cover; background-position: center;"></div>
-        <div class="portfolio-body"><h4>Bespoke Fitting Session</h4><p>Personal measurement and consultation for a made‑to‑measure suit – every detail tailored to the client.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="testimonials" class="section">
-  <div class="container">
-    <h2 class="section-title">Words of Adoration</h2>
-    <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"Vibe Stitch designed my wedding gown and it was more beautiful than I ever imagined. The fitting was perfect, the beadwork exquisite. I felt like royalty."</p>
-            <p class="testimonial-author">Mrs. T. Adeola</p>
-            <p class="testimonial-role">Bride, Lagos</p>
-          </div>
+    <section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <img src="fashion_studio.jpg" alt="Atelier" class="absolute inset-0 w-full h-full object-cover brightness-50">
+        <div class="relative text-center text-white p-6">
+            <h1 class="text-5xl font-serif italic mb-4">Precision in Every Stitch</h1>
+            <p class="uppercase tracking-widest text-sm">Bespoke Apparel for the Modern Nigerian Aesthetic</p>
         </div>
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"We ordered 50 corporate uniforms for our hotel staff – delivered on time, every piece precisely sized, and the fabric quality exceeded our expectations."</p>
-            <p class="testimonial-author">Mr. E. Okonkwo</p>
-            <p class="testimonial-role">GM, Grand Pinnacle Hotels</p>
-          </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <h2 class="text-center text-2xl font-serif mb-12 uppercase tracking-widest underline decoration-stone-300 underline-offset-8">The Collection</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+                <img src="bridal_gown.jpg" alt="Bridal" class="w-full h-96 object-cover hover:opacity-90 transition">
+                <p class="mt-4 font-bold text-sm uppercase">Bridal Couture</p>
+            </div>
+            <div class="group cursor-pointer">
+                <img src="native_wear.jpg" alt="Native" class="w-full h-96 object-cover hover:opacity-90 transition">
+                <p class="mt-4 font-bold text-sm uppercase">Contemporary Native</p>
+            </div>
+            <div class="group cursor-pointer">
+                <img src="mens_suit.jpg" alt="Suits" class="w-full h-96 object-cover hover:opacity-90 transition">
+                <p class="mt-4 font-bold text-sm uppercase">Tailored Suiting</p>
+            </div>
         </div>
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"My three‑piece suit from Vibe Stitch fits like a second skin. I've never received so many compliments. Truly world‑class tailoring."</p>
-            <p class="testimonial-author">Chief K. Bamigboye</p>
-            <p class="testimonial-role">Barrister & Businessman</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"As an emerging designer, their sample production service was a game changer. Professional pattern work and fast turnaround."</p>
-            <p class="testimonial-author">Ms. A. Yusuf</p>
-            <p class="testimonial-role">Founder, AYA Fashion Label</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="contact" class="section section-light">
-  <div class="container">
-    <h2 class="section-title">Connect With Us</h2>
-    <div class="contact-grid">
-      <div>
-        <h4 style="font-weight:900; margin-bottom:1.5rem;">Studio Address</h4>
-        <div class="contact-item"><i class="bi bi-geo-alt-fill"></i><div>Sango Ota, Ogun State, Nigeria</div></div>
-        <div class="contact-item"><i class="bi bi-telephone-fill"></i><div><strong>Phone:</strong><br><a href="tel:+2348123491673">+234 812 349 1673</a></div></div>
-        <div class="contact-item"><i class="bi bi-envelope-fill"></i><div><strong>Email:</strong><br><a href="mailto:info.vibestitcheapparel@gmail.com">info.vibestitcheapparel@gmail.com</a></div></div>
-        <div class="contact-item"><i class="bi bi-whatsapp"></i><div><strong>WhatsApp:</strong><br><a href="https://wa.me/2348123491673" target="_blank">Chat with us</a></div></div>
-      </div>
-      <div>
-        <h4 style="font-weight:900; margin-bottom:1.5rem;">Certifications</h4>
-        <span class="badge-cert">🏛️ CAC Registered – RC 875527</span>
-        <span class="badge-cert">🇳🇬 Made in Nigeria</span>
-        <span class="badge-cert">🧵 Bespoke & Ready‑to‑Wear</span>
-        <p style="color: var(--text-muted); margin-top:1.8rem; font-size:0.9rem;">We are a private company limited by shares, fully compliant with Nigerian corporate and industry standards.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <footer class="bg-stone-900 text-stone-300 py-16 text-center">
+        <h3 class="text-white text-xl mb-6">Ready to create your look?</h3>
+        <a href="https://wa.me/234XXXXXXXXXX" class="bg-white text-black px-8 py-4 font-bold uppercase text-sm hover:bg-stone-200 transition">Contact via WhatsApp</a>
+        <p class="mt-12 text-xs uppercase tracking-widest">&copy; 2026 Vibe Stitch Apparel</p>
+    </footer>
 
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025–2026 Vibe Stitch Apparel Ltd. All rights reserved. | CAC: RC 875527 | <a href="tel:+2348123491673">+234 812 349 1673</a></p>
-  </div>
-</footer>
-
-<a href="#" class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></a>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    if (window.scrollY > 50) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  });
-
-  const backBtn = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) backBtn.classList.add('show');
-    else backBtn.classList.remove('show');
-  });
-  backBtn.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); });
-
-  const counters = document.querySelectorAll('.counter');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = +el.getAttribute('data-target');
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let count = 0;
-        const update = () => {
-          count += increment;
-          if (count < target) { el.textContent = Math.ceil(count); requestAnimationFrame(update); }
-          else el.textContent = target;
-        };
-        update();
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-  counters.forEach(c => observer.observe(c));
-</script>
 </body>
 </html>
