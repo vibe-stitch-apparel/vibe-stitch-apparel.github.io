@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120">
+  <defs>
+    <style>
+      .logo-text { font-family: 'Times New Roman', Times, serif; fill: #B38B59; }
+      .monogram { font-size: 72px; letter-spacing: -2px; }
+      .brand { font-size: 16px; letter-spacing: 5px; text-transform: uppercase; }
+    </style>
+  </defs>
+  <text x="50%" y="70" class="logo-text monogram" text-anchor="middle">VS</text>
+  <text x="50%" y="105" class="logo-text brand" text-anchor="middle">VIBE STITCH</text>
+</svg>
